@@ -1,0 +1,23 @@
+# Runtime + console dependencies, pinned exactly.
+# Installs use the hash lock requirements.lock with --require-hashes (see README;
+# the lock holds the full transitive closure; regenerate it with
+# scripts/build_host_lock.py after changing a pin here).
+# Tests: requirements-dev.txt / .lock. CDK: requirements-cdk.txt / .lock.
+
+# Core dependencies (required for all modes)
+boto3==1.43.72
+botocore==1.43.72
+s3transfer==0.19.2
+jmespath==1.1.0
+urllib3==2.7.0
+python-dateutil==2.9.0.post0
+pandas==3.0.5
+numpy==2.5.2
+networkx==3.6.1
+
+# Dashboard
+streamlit==1.61.1
+plotly==6.9.0
+
+# GPU mode (cudf/cugraph) and the AgentCore CLI are installed separately;
+# see README.md ("GPU mode (optional)" and "AgentCore CLI") for the pinned commands.

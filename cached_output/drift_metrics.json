@@ -1,0 +1,33 @@
+{
+  "window_start": "2026-08-17T13:00:00Z",
+  "window_end": "2026-08-17T14:00:00Z",
+  "metrics": {
+    "total_detections": 47,
+    "total_clusters_flagged": 12,
+    "total_sar_generated": 8,
+    "total_challenger_disputes": 4,
+    "total_guardrail_interventions": 1,
+    "dispute_rate": 0.33,
+    "guardrail_intervention_rate": 0.04,
+    "detection_volume_multiplier": 1.2,
+    "avg_gpu_time_seconds": 13.8,
+    "avg_sar_latency_ms": 1150,
+    "avg_challenger_latency_ms": 980,
+    "file_sar_count": 8,
+    "needs_review_count": 4,
+    "circuit_breaker_invocations": 0
+  },
+  "thresholds": {
+    "challenger_dispute_rate": 0.51,
+    "guardrail_intervention_rate": 0.10,
+    "detection_volume_multiplier": 3.0
+  },
+  "status": "HEALTHY",
+  "alerts": [],
+  "hourly_trend": [
+    {"hour": "13:00", "detections": 11, "disputes": 1, "guardrail_hits": 0},
+    {"hour": "13:15", "detections": 13, "disputes": 1, "guardrail_hits": 0},
+    {"hour": "13:30", "detections": 10, "disputes": 1, "guardrail_hits": 1},
+    {"hour": "13:45", "detections": 13, "disputes": 1, "guardrail_hits": 0}
+  ]
+}

@@ -1,0 +1,3 @@
+# Test dependencies, pinned exactly.
+# Installs use the hash lock requirements-dev.lock with --require-hashes (see README).
+pytest==9.1.1

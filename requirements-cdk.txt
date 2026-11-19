@@ -1,0 +1,4 @@
+# CDK app dependencies, pinned exactly.
+# Installs use the hash lock requirements-cdk.lock with --require-hashes (see README).
+aws-cdk-lib==2.265.0
+constructs==10.8.1

@@ -1,0 +1,27 @@
+{
+  "registry_version": "2026-Q3",
+  "description": "Organization-approved foundation models for agentic use. Managed by the Model Risk Committee. Each entry is an exact, version-pinned model identifier — only models on this list may be invoked. Adding a new model or version requires a documented model-risk review.",
+  "last_reviewed": "2026-07-15",
+  "approved_models": [
+    {
+      "model_id": "us.anthropic.claude-sonnet-4-5-20250929-v1:0",
+      "display_name": "Claude Sonnet 4.5 (2025-09-29)",
+      "status": "approved",
+      "approved_by": "Model Risk Committee",
+      "approved_on": "2026-07-15",
+      "expires_on": "2027-07-15",
+      "role": "champion",
+      "notes": "Champion model for SAR narrative generation. Validated under SR 11-7 model-risk review MRC-2026-0142."
+    },
+    {
+      "model_id": "us.amazon.nova-pro-v1:0",
+      "display_name": "Amazon Nova Pro",
+      "status": "approved",
+      "approved_by": "Model Risk Committee",
+      "approved_on": "2026-07-15",
+      "expires_on": "2027-07-15",
+      "role": "challenger",
+      "notes": "Independent challenger model — different model family from the champion so effective challenge is at the model level, not just the prompt (SR 11-7). Validated under model-risk review MRC-2026-0143."
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+# Detection Agent — AgentCore Runtime dependencies, pinned exactly.
+# Minimal: no fastapi/uvicorn (uses stdlib http.server for fast cold start).
+# Packaging installs requirements.lock (hash-locked closure for linux aarch64
+# / cp313, binary-only); regenerate it with scripts/build_host_lock.py --target agent.
+
+# Core detection dependencies
+boto3==1.43.72
+pandas==3.0.5
+numpy==2.5.2
+networkx==3.6.1

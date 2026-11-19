@@ -1,0 +1,50 @@
+{
+  "detection_id": "d7a3f1c2-8b4e-4a1f-9c3d-2e5f6a7b8c9d",
+  "timestamp": "2026-08-17T14:23:41.000Z",
+  "transaction_count": 5000000,
+  "gpu_time_seconds": 14.2,
+  "flagged_clusters": [
+    {
+      "cluster_id": "c1a2b3c4-5d6e-7f8a-9b0c-1d2e3f4a5b6c",
+      "typology": "circular_structuring",
+      "accounts": ["acc-7f3a", "acc-2b1c", "acc-9d4e", "acc-5f6a", "acc-8c7b", "acc-1e2d", "acc-4a3f", "acc-6b5c", "acc-0d9e", "acc-3f2a"],
+      "account_count": 10,
+      "total_amount_usd": 45230.50,
+      "time_span_seconds": 54.0,
+      "merchant_categories": ["crypto_exchange", "wire_transfer"],
+      "confidence_factors": {
+        "avg_intra_amount": 4523.05,
+        "circular_ratio": 0.8,
+        "fan_out_max": 2,
+        "fan_in_max": 2
+      }
+    },
+    {
+      "cluster_id": "e2f3a4b5-6c7d-8e9f-0a1b-2c3d4e5f6a7b",
+      "typology": "layering_shell",
+      "accounts": ["acc-aa11", "acc-bb22", "acc-cc33", "acc-dd44", "acc-ee55", "acc-ff66"],
+      "account_count": 6,
+      "total_amount_usd": 62841.73,
+      "time_span_seconds": 72.0,
+      "merchant_categories": ["wire_transfer", "consulting_fee", "invoice_payment"],
+      "confidence_factors": {
+        "avg_intra_amount": 6982.41,
+        "circular_ratio": 0.33,
+        "fan_out_max": 4,
+        "fan_in_max": 4
+      }
+    }
+  ],
+  "pagerank_top_10": [
+    {"node": "acc-7f3a", "score": 0.004231},
+    {"node": "acc-aa11", "score": 0.003891},
+    {"node": "acc-2b1c", "score": 0.003542},
+    {"node": "acc-bb22", "score": 0.003201},
+    {"node": "acc-9d4e", "score": 0.002987},
+    {"node": "acc-ff66", "score": 0.002743},
+    {"node": "acc-5f6a", "score": 0.002501},
+    {"node": "acc-cc33", "score": 0.002298},
+    {"node": "acc-8c7b", "score": 0.002145},
+    {"node": "acc-dd44", "score": 0.001987}
+  ]
+}

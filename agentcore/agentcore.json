@@ -1,0 +1,46 @@
+{
+  "agents": [
+    {
+      "name": "ComplianceAgent",
+      "language": "Python",
+      "framework": "Custom",
+      "type": "create",
+      "codeLocation": "agentcore/compliance_agent",
+      "entrypoint": "main.py",
+      "build": "CodeZip",
+      "modelProvider": "Bedrock",
+      "protocol": "HTTP",
+      "networkMode": "PUBLIC",
+      "memory": "none",
+      "description": "FSI Compliance Reasoner — SAR Generation + Independent Challenger (SR 11-7). Assesses fraud detection clusters, generates FinCEN SAR narratives via Bedrock with Guardrail, and independently challenges detections."
+    },
+    {
+      "name": "DetectionAgent",
+      "language": "Python",
+      "framework": "Custom",
+      "type": "create",
+      "codeLocation": "agentcore/detection_agent",
+      "entrypoint": "main.py",
+      "build": "CodeZip",
+      "modelProvider": "None",
+      "protocol": "HTTP",
+      "networkMode": "PUBLIC",
+      "memory": "none",
+      "description": "FSI Detection Agent — GPU-accelerated fraud ring detection with PAN ingress filter. Does NOT invoke Bedrock (NHI separation)."
+    },
+    {
+      "name": "ExecutorAgent",
+      "language": "Python",
+      "framework": "Custom",
+      "type": "create",
+      "codeLocation": "agentcore/executor_agent",
+      "entrypoint": "main.py",
+      "build": "CodeZip",
+      "modelProvider": "None",
+      "protocol": "HTTP",
+      "networkMode": "PUBLIC",
+      "memory": "none",
+      "description": "FSI Executor Agent — Routes compliance decisions (FILE_SAR, NEEDS_REVIEW, CIRCUIT_BREAKER). Enforces SOX separation of duties."
+    }
+  ]
+}

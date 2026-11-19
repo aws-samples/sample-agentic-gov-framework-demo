@@ -1,0 +1,11 @@
+# Gitleaks false positives: test fixtures only. Nothing real is stored in this repo.
+# Format: <commit>:<file>:<rule>:<line> (fingerprints exactly as reported by gitleaks).
+
+# SECRET_TOKEN is base64 of {"kid":"secret-token"}; used to assert tokens never reach the audit log.
+da125e83c8f7dabff60bbde01813b1a495470de6:tests/test_operator_audit.py:generic-api-key:22
+
+# TOKEN is a made-up 43-char string shaped like secrets.token_urlsafe(32); only its SHA-256 is exercised in tests.
+529c732d8002eb68d34e72a0c628918946bc2baf:tests/_executor_fixtures.py:generic-api-key:12
+
+# PASSWORD is a throwaway login fixture for the dashboard login-hardening tests.
+5fdfe6831218c5081391d06eea3da98eb25d5988:tests/test_dashboard_login_hardening.py:hashicorp-tf-password:34

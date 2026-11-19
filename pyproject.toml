@@ -1,0 +1,43 @@
+[project]
+name = "fsi-agentic-compliance"
+version = "1.0.0"
+description = "GPU-accelerated fraud detection with governance envelope architecture for financial services"
+readme = "README.md"
+license = {file = "LICENSE"}
+# pandas 3.x requires Python >= 3.11; the AgentCore runtimes are 3.13.
+requires-python = ">=3.11"
+# Exact pins; hash-locked installs use requirements*.lock.
+dependencies = [
+    "boto3==1.43.72",
+    "botocore==1.43.72",
+    "s3transfer==0.19.2",
+    "jmespath==1.1.0",
+    "urllib3==2.7.0",
+    "python-dateutil==2.9.0.post0",
+    "pandas==3.0.5",
+    "numpy==2.5.2",
+    "networkx==3.6.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==9.1.1",
+]
+gpu = [
+    # NVIDIA RAPIDS (CUDA toolkit required): see README.md "GPU mode (optional)"
+    # for the pinned install command.
+]
+
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+[tool.bandit]
+# Tests carry deliberate fake credentials, loopback-refusal assertions, seeded
+# RNGs and subprocess fixtures (B101/B105/B106/B104/B311/B404/B603). Production
+# code stays in scope and carries per-line `# nosec <ID> -- <reason>` instead.
+exclude_dirs = ["tests"]

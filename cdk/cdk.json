@@ -1,0 +1,7 @@
+{
+  "app": "../.venv/bin/python app.py",
+  "context": {
+    "@aws-cdk/core:stackRelativeExports": true,
+    "audit_archive_retention_days": 90
+  }
+}
